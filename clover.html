@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLOVER-ART</title>
+
+    <link rel="icon" href="Logo Store.jpg" type="image/png" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Navbar efek saat scroll */
+      .navbar {
+        transition: all 0.3s;
+      }
+      .navbar.scrolled {
+        background-color: #6da35c !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .nav-link {
+        color: #ffffff;
+        font-weight: 500;
+        margin-right: 15px;
+      }
+      .nav-link:hover {
+        color: #007bff;
+      }
+      /* Jumbotron Overlay */
+      #home .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .portfolio-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the image covers the entire area */
+        aspect-ratio: 1 / 1; /* Force images to be square */
+      }
+      .portfolio-item {
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      .portfolio-item.hide {
+        opacity: 0;
+        transform: scale(0.9);
+        pointer-events: none;
+      }
+      .portfolio-item.show {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <!-- Ganti gambar dengan ikon Font Awesome -->
+          <i
+            class="fa-solid fa-clover"
+            style="font-size: 40px; color: #000"
+          ></i>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <ul
+                class="dropdown-menu dropdown-menu-end p-3"
+                aria-labelledby="searchDropdown"
+              >
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navbar End -->
+
+    <!-- Jumbotron -->
+
+    <section id="home" class="position-relative d-flex align-items-center justify-content-center text-center text-white" style="height: 100vh; background-image: url('assets/images/bg.jpg'); background-size: cover; background-position: center;">
+      <div class="overlay"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="display-4 fw-bold">
+              <span style="color: #e5ff00">Seni</span> Adalah Ledakan
+            </h1>
+            <p class="lead mb-4 fw-bold">Clover Creative</p>
+            <a href="https://wa.me/6281271833213?text=Halo,%20saya%20tertarik%20untuk%20mendapatkan%20informasi%20lebih%20lanjut." class="btn btn-primary px-4 py-2" target="_blank">TANYA HARGA? LET'S GO</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Jumbotron End -->
+
+    <!--Section Content-->
+
+    <!-- Service Section Start -->
+    <section id="service" class="pt-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>What We Do?</h2>
+          <div
+            class="border-top border-3 mx-auto"
+            style="width: 60px; margin-top: 10px"
+          ></div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 h-100">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i
+                    class="fas fa-solid fa-paint-roller fa-3x text-primary"
+                  ></i>
+                </div>
+                <h3 class="h5">Mural</h3>
+                <p class="text-muted">
+                  Membuat Rumah Anda Indah Dengan Goresan Seni
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 h-100">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="fas fa-solid fa-paintbrush fa-3x text-primary"></i>
+                </div>
+                <h3 class="h5">Canvas</h3>
+                <p class="text-muted">
+                  Hiasi Dinding Rumah Anda Dengan Lukisan Yang Indah
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card border-0 h-100">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="fas fa-brands fa-artstation fa-3x text-primary"></i>
+                </div>
+                <h3 class="h5">Custom</h3>
+                <p class="text-muted">
+                  Punya Barang Sudah Usang? Kami Siap Membuat Barang Anda
+                  Menjadi Indah Dengan Seni
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service Section End -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>Our Portfolio</h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="text-center mb-4">
+          <button
+            class="btn btn-outline-primary mx-1 filter-btn active"
+            data-filter="mural"
+          >
+            Mural
+          </button>
+          <button
+            class="btn btn-outline-primary mx-1 filter-btn"
+            data-filter="canvas"
+          >
+            Canvas
+          </button>
+          <button
+            class="btn btn-outline-primary mx-1 filter-btn"
+            data-filter="custom"
+          >
+            Custom
+          </button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="row portfolio-container">
+          <!-- Mural Items -->
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item mural">
+            <div class="card border-0 shadow">
+              <img src="mural1.jpg" class="card-img-top" alt="Mural Art 1" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item mural">
+            <div class="card border-0 shadow">
+              <img src="mural2.jpg" class="card-img-top" alt="Mural Art 2" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item mural">
+            <div class="card border-0 shadow">
+              <img src="mural3.jpg" class="card-img-top" alt="Mural Art 3" />
+            </div>
+          </div>
+
+          <!-- Canvas Items -->
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item canvas">
+            <div class="card border-0 shadow">
+              <img src="canvas1.jpg" class="card-img-top" alt="Canvas Art 1" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item canvas">
+            <div class="card border-0 shadow">
+              <img src="canvas2.jpg" class="card-img-top" alt="Canvas Art 2" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item canvas">
+            <div class="card border-0 shadow">
+              <img src="canvas3.jpg" class="card-img-top" alt="Canvas Art 3" />
+            </div>
+          </div>
+
+          <!-- Custom Items -->
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item custom">
+            <div class="card border-0 shadow">
+              <img src="custom1.jpg" class="card-img-top" alt="Custom Art 1" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item custom">
+            <div class="card border-0 shadow">
+              <img src="custom2.jpg" class="card-img-top" alt="Custom Art 2" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 portfolio-item custom">
+            <div class="card border-0 shadow">
+              <img src="custom3.jpg" class="card-img-top" alt="Custom Art 3" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section Start -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Gambar di Kiri -->
+          <div class="col-lg-6 mb-4">
+            <img
+              src="bg.jpg"
+              alt="About Image"
+              class="img-fluid rounded shadow-lg"
+            />
+          </div>
+          <!-- Deskripsi di Kanan -->
+          <div class="col-lg-6 mb-4">
+            <h2 class="mb-4">About Us</h2>
+            <p class="lead">
+              Kami adalah tim seniman yang berdedikasi untuk membawa karya seni
+              ke dalam kehidupan sehari-hari. Dengan berbagai pengalaman dan
+              latar belakang, kami menggabungkan kreativitas dan teknik untuk
+              menciptakan karya seni yang unik dan bermakna.
+            </p>
+            <p>
+              Kami percaya bahwa seni adalah cara terbaik untuk mengekspresikan
+              ide dan perasaan. Dengan semangat dan komitmen yang kuat, kami
+              berusaha untuk membawa karya seni yang dapat menginspirasi dan
+              memperkaya ruang-ruang yang ada. Setiap karya yang kami buat,
+              mulai dari mural, kanvas, hingga custom art, adalah cerminan dari
+              dedikasi dan hasrat kami terhadap seni.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Footer Section Start -->
+    <footer
+      class="text-white py-5"
+      style="background-color: #2d5f1d"
+      id="contact"
+    >
+      <div class="container">
+        <!-- Title "Contact" -->
+        <div class="text-center mb-4">
+          <h2>CONTACT</h2>
+          <hr />
+        </div>
+        <div class="row">
+          <!-- Alamat dan Maps (Kiri) -->
+          <div class="col-md-6 mb-4">
+            <h5>Our Location</h5>
+            <p>
+              Universitas Bina Darma, Jl. Jend. Sudirman No.99, Palembang,
+              Indonesia
+            </p>
+            <!-- Ganti URL peta dengan URL yang kamu berikan -->
+            <iframe
+              src="https://maps.google.com/maps?q=Universitas%20Bina%20Darma,%20Jl.%20Jend.%20Sudirman%20No.99,%20Palembang,%20Indonesia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <!-- Sosial Media dan Nama Kampus (Kanan) -->
+          <div
+            class="col-md-6 mb-4 d-flex flex-column justify-content-center align-items-center"
+          >
+            <h5>Follow Us</h5>
+            <div class="d-flex justify-content-center mb-4">
+              <a
+                href="https://www.instagram.com"
+                class="text-white me-3"
+                target="_blank"
+              >
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+              <a
+                href="https://www.facebook.com"
+                class="text-white me-3"
+                target="_blank"
+              >
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+              <a
+                href="https://www.twitter.com"
+                class="text-white me-3"
+                target="_blank"
+              >
+                <i class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                class="text-white"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin fa-2x"></i>
+              </a>
+            </div>
+            <p>© 2025 Universitas Bina Darma. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!--Section Content End-->
+
+    <!-- Bootstrap 5 Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar scroll effect -->
+    <script>
+      const navbar = document.querySelector(".navbar");
+      window.addEventListener("scroll", function () {
+        navbar.classList.toggle("scrolled", window.scrollY > 50);
+      });
+    </script>
+
+    <script>
+      // Filter functionality
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+      // Function to show and hide portfolio items based on category filter
+      function filterPortfolio(category) {
+        portfolioItems.forEach((item) => {
+          if (category === "all" || item.classList.contains(category)) {
+            item.style.display = "block"; // Show matching items
+          } else {
+            item.style.display = "none"; // Hide non-matching items
+          }
+        });
+      }
+
+      // When a filter button is clicked, show items related to the clicked category
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          // Add active class to the clicked button
+          button.classList.add("active");
+          // Filter the portfolio
+          filterPortfolio(button.getAttribute("data-filter"));
+        });
+      });
+
+      // Show 'Mural' items by default when the page loads
+      window.addEventListener("load", () => {
+        filterPortfolio("mural");
+      });
+    </script>
+  </body>
+</html>
